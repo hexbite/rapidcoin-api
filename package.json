@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "RapidCoin API Library",
   "author": "Hexbite Labs Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexbite/rapidcoin-api"
+  },
   "main": "app.js",
   "license": "MIT",
   "engines": {
