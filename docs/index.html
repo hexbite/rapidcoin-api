@@ -1,0 +1,1552 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-929dfc9c.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e9bde216.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-fa2b2b7f.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#invoices" class="toc-h1 toc-link" data-title="Invoices">Invoices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-invoice-request" class="toc-h2 toc-link" data-title="Create a new invoice request">Create a new invoice request</a>
+                  </li>
+                  <li>
+                    <a href="#read-an-invoice" class="toc-h2 toc-link" data-title="Read an invoice">Read an invoice</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-invoice" class="toc-h2 toc-link" data-title="Update an invoice">Update an invoice</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#payouts" class="toc-h1 toc-link" data-title="Payouts">Payouts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-payout-request" class="toc-h2 toc-link" data-title="Create a new payout request">Create a new payout request</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-payout-details" class="toc-h2 toc-link" data-title="Get a Specific Payout Details">Get a Specific Payout Details</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#altcoin-invoices" class="toc-h1 toc-link" data-title="Altcoin Invoices">Altcoin Invoices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-invoice-request-2" class="toc-h2 toc-link" data-title="Create a new invoice request">Create a new invoice request</a>
+                  </li>
+                  <li>
+                    <a href="#read-an-invoice-2" class="toc-h2 toc-link" data-title="Read an invoice">Read an invoice</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#altcoin-payouts" class="toc-h1 toc-link" data-title="Altcoin Payouts">Altcoin Payouts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-payout-request-2" class="toc-h2 toc-link" data-title="Create a new payout request">Create a new payout request</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-payout-details-2" class="toc-h2 toc-link" data-title="Get a Specific Payout Details">Get a Specific Payout Details</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rates" class="toc-h1 toc-link" data-title="Rates">Rates</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-exchange-rate" class="toc-h2 toc-link" data-title="Get Exchange Rate">Get Exchange Rate</a>
+                  </li>
+                  <li>
+                    <a href="#get-organization-balance" class="toc-h2 toc-link" data-title="Get Organization balance">Get Organization balance</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://rapidcoin.com/dashboard/signup'>Sign Up/ Login</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c">#  _                  _</span>
+<span class="c"># |_)  _  ._  .  _|  /   _  . ._</span>
+<span class="c"># | \ |_| |_| | |_|  \_ |_| | | |</span>
+<span class="c">#         |</span>
+</code></pre></div>
+<p>The general flow of invoicing will be that the client site will request a new invoice from Rapidcoin from the Rapidcoin invoice route. The request for a new invoice will contain a <code>notification_url</code> and <code>confirmation_url</code> callback. Rapidcoin will return a <code>HTTP 201</code> with the new invoice in JSON which will contain a deposit address for the customer. The client site will provide this address to the customer. The invoice can be an open invoice with no fixed amount set or it can be created with a fixed invoice amount. Generally speaking our clients use an open invoice and allow customers to deposit as much as they&#39;d like into the address.</p>
+
+<p>Once the customer sends the <code>BTC</code> to the designated address, Rapidcoin will do a POST callback to the notification_url with the POST body as the invoice JSON (invoice will be updated with status paid and number of confirmations). Once the transaction has reached the number of <code>confirmations_required</code> on the blockchain, Rapidcoin will do a POST callback to the <code>confirmation_url</code> with the POST body as the invoice JSON (invoice will be updated with status confirmed and number of confirmations). Notification and confirmation URLs need to be acknowledged with a HTTP status code of 200, if a notification is not acknowledged it will retry every minute. The POST body for a notification and confirmation URL will be the JSON of the invoice response (see response of <code>GET /invoices/:invoice_id</code>).</p>
+
+<p>If a customer decides to deposit again into the same BTC address, a SUB_INVOICE will be automatically created in Rapidcoin with the same details as the original invoice but with a new invoice ID. The notification_url will be called back immediately with details of the new SUB_INVOICE (status will be paid). The SUB_INVOICE will contain the same details as the parent_invoice with the description SUB_INVOICE as well as the parent_invoice_id of the original invoice. The confirmation_url will be called back again once the transaction has reached the amount of confirmations dedicated by the confirmations_required. This will allow customers to deposit multiple times to the same BTC address if necessary.</p>
+
+<p>We currently guarantee about a week duration of watched deposits for any given BTC address in the system. General practice is that after this week the client site should force the customer to generate a new invoice and BTC address.</p>
+
+<p>Finally, once the transaction has reached 6 confirmations then the invoice will be changed to status complete and booked into the ledger for accounting purposes. No transaction has ever been reversed on the blockchain with 6 or more confirmations.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: &lt;API-KEY&gt;"</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</code></pre></div>
+<p>Rapidcoin expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Content-Type: application/json</code></p>
+
+<p><code>x-api-key: API-KEY</code></p>
+
+<p><code>x-api-version: 1.0</code></p>
+
+<aside class="notice">
+You must replace <code>API-KEY</code> with your personal API key.
+</aside>
+<h1 id='invoices'>Invoices</h1><h2 id='create-a-new-invoice-request'>Create a new invoice request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/invoices"</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"notification_url": "http://localhost/notification", "confirmation_url": "http://localhost/confirmation", "reference_id": "reference_id", "customer_id": "customer_id", "description": "description"}'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">rcInvoice</span> <span class="o">=</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">createInvoice</span><span class="p">({});</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a2277bfd-07fd-4a03-9a45-411c4101cdaf"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f7e5950450d1fa7658314cf333cadedf"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1476816235438"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiration_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1477421035438"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exception_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost/notification"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reference_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parent_invoice_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mk38mzoxsAhrNCugZAgxLYmT582t9uvLkh"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"current_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-18T18:43:55.488Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new invoice.</p>
+
+<p><img src="images/rc-invoice-deposit-106f7880.png" width="auto"></p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://www.rapidcoin.com/api/invoices</code></p>
+<h3 id='json-parameters'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reference_id</td>
+<td>string, optional</td>
+<td>Custom reference id associated with invoice</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>string, optional</td>
+<td>Custom customer id associated with invoice</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string, optional</td>
+<td>Custom description associated with invoice</td>
+</tr>
+<tr>
+<td>confirmations_required</td>
+<td>number, optional</td>
+<td>Number of blockchains required to complete invoice transaction &amp; trigger confirmation_url IPN</td>
+</tr>
+<tr>
+<td>notification_url</td>
+<td>string, optional</td>
+<td>Notification URL to POST when transaction is received on address</td>
+</tr>
+<tr>
+<td>confirmation_url</td>
+<td>string, optional</td>
+<td>Notification URL to POST when blockchain confirmations reaches confirmations_required</td>
+</tr>
+<tr>
+<td>redirect_url</td>
+<td>string, optional</td>
+<td>URL to redirect to after successful payment (web flow)</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>(string, optional * - default is BTC)</td>
+<td>Three character currency code, either USD or BTC. Used with amount to calculate rate &amp; amount_btc</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>optional *</td>
+<td>Amount of invoice in specified currency</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+* <code>currency</code> and <code>amount</code> are optional, if they are not specified the invoice will be created an "open" invoice
+</aside>
+<h3 id='response-fields'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique Id of invoice</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Invoice status can either be <code>open</code>, <code>pending</code>, <code>confirming</code>, <code>complete</code>, <code>expired</code></td>
+</tr>
+<tr>
+<td>token</td>
+<td>Unique token of invoice</td>
+</tr>
+<tr>
+<td>invoice_time</td>
+<td>UNIX timestamp when invoice was created</td>
+</tr>
+<tr>
+<td>expiration_time</td>
+<td>UNIX timestamp of when invoice address is expired of invoice</td>
+</tr>
+<tr>
+<td>exception_status</td>
+<td>Exception status of invoice</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Three character currency code, either USD or BTC. Used with amount to calculate rate &amp; amount_btc</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>Rate used to convert amount in currency to amount_btc in BTC</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Amount of invoice in specified currency</td>
+</tr>
+<tr>
+<td>amount_btc</td>
+<td>Amount of invoice in BTC, calculated from currency, amount, and rate</td>
+</tr>
+<tr>
+<td>paid_currency</td>
+<td>Three character currency code, either USD or BTC. Used to show what currency customer will be paid out in</td>
+</tr>
+<tr>
+<td>paid_rate</td>
+<td>Rate used to convert amount in BTC to paid amount in paid_currency</td>
+</tr>
+<tr>
+<td>paid_amount</td>
+<td>Amount paid out to customer in paid_currency</td>
+</tr>
+<tr>
+<td>paid_amount_btc</td>
+<td>Amount paid out to customer in BTC</td>
+</tr>
+<tr>
+<td>redirect_url</td>
+<td>URL to redirect to after successful payment</td>
+</tr>
+<tr>
+<td>notification_url</td>
+<td>Notification URL to POST when transaction is received on address</td>
+</tr>
+<tr>
+<td>confirmation_url</td>
+<td>Notification URL to POST when blockchain confirmations reaches required_confirmations</td>
+</tr>
+<tr>
+<td>confirmations_required</td>
+<td>Number of blockchain confirmations required to complete invoice and trigger POST to confirmation_notification_url</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>Custom reference id associated with invoice provided on creation</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>Custom customer id associated with invoice provided on creation</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Custom description associated with invoice provided on creation</td>
+</tr>
+<tr>
+<td>parent_invoice_id</td>
+<td>Unique Id of parent invoice (if second deposit made on the same address - will reference the first invoice created. null if first invoice)</td>
+</tr>
+<tr>
+<td>paid_btc</td>
+<td>btc amount paid to invoice</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Bitcoin deposit address of invoice</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td>array of blockchain transactions of payments to invoice invoice eg. &quot;transactions&quot;: [ {&quot;hash&quot;:&quot;f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f&quot;, &quot;amount&quot;: 0, &quot;confirmations&quot; : 6, &quot;time&quot;: 0, &quot;received_time&quot;: 0}]</td>
+</tr>
+<tr>
+<td>current_time</td>
+<td>Current timestamp of request</td>
+</tr>
+</tbody></table>
+<h2 id='read-an-invoice'>Read an invoice</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/invoices/afccfa74-1bad-45db-ab39-17bcfaa6f027"</span> <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">readInvoice</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"afccfa74-1bad-45db-ab39-17bcfaa6f027"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9e9d8f803e5477159e35c102a2a9a6a5"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468381658942"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiration_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468986458942"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exception_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.000000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">662.550000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.66</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/api/logger"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/api/logger"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUB_INVOICE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parent_invoice_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08d07cea-6c34-4577-8fb2-5f7280d64280"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00100000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n331nWZ14aZyiY5KHx35PcdvXedaGtsrtz"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7fa4c6aba1050c128740d508feb2f62c531b713214ad7bc7b9fe0af1b1ecfdcb"</span><span class="p">,</span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1468381658000</span><span class="p">,</span><span class="w"> </span><span class="nl">"recevied_time"</span><span class="p">:</span><span class="mi">1468381658000</span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"current_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-13T03:48:47.096Z"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific invoice.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/invoices/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the invoice to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-an-invoice'>Update an invoice</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/invoices/afccfa74-1bad-45db-ab39-17bcfaa6f027"</span> <span class="se">\</span>
+  <span class="nt">-X</span> PATCH <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">updateInvoice</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">params</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"afccfa74-1bad-45db-ab39-17bcfaa6f027"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9e9d8f803e5477159e35c102a2a9a6a5"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468381658942"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiration_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468986458942"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exception_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.000000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">662.550000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.66</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/api/logger"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/api/logger"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUB_INVOICE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parent_invoice_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08d07cea-6c34-4577-8fb2-5f7280d64280"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n331nWZ14aZyiY5KHx35PcdvXedaGtsrtz"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7fa4c6aba1050c128740d508feb2f62c531b713214ad7bc7b9fe0af1b1ecfdcb"</span><span class="p">,</span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00100000</span><span class="p">,</span><span class="w"> </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468381658000"</span><span class="p">,</span><span class="w"> </span><span class="nl">"recevied_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1468381658000"</span><span class="w"> </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"current_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-13T03:48:47.096Z"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves update an invoice.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PATCH https://www.rapidcoin.com/api/invoices/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the invoice to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='json-parameters-2'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reference_id</td>
+<td>string, optional</td>
+<td>Custom reference id associated with invoice</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>string, optional</td>
+<td>Custom customer id associated with invoice</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string, optional</td>
+<td>Custom description associated with invoice</td>
+</tr>
+</tbody></table>
+<h1 id='payouts'>Payouts</h1><h2 id='create-a-new-payout-request'>Create a new payout request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/payouts"</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"currency": "BTC", "amount": 0.001, "address": "n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi", "reference_id": "2d7428a6", "customer_id": "5982544853"}'</span> 
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">createPayout</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3658231a-cad1-47fb-b1bf-1b0fd5dh6dfd"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d7428a6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5982544853"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:14:01.768Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:14:01.808Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint create a new payout request.</p>
+
+<p><img src="images/rc-payout-16cf62c1.png" width="auto"></p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://rapidcoin.com/api/payouts</code></p>
+<h3 id='json-parameters-3'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency</td>
+<td>string, required</td>
+<td>Three character currency code, either USD or BTC. Used with amount to calculate rate &amp; amount_btc</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number, required</td>
+<td>Amount of payout to send in specified currency</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string, required</td>
+<td>Bitcoin address to send payout to</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>string, optional</td>
+<td>Custom reference id associated with payout</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>string, optional</td>
+<td>Custom customer id associated with payout</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string, optional</td>
+<td>Custom description associated with payout</td>
+</tr>
+</tbody></table>
+<h3 id='response-fields-2'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique Id of payout</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Payout status can either be <code>pending</code>, <code>complete</code>, <code>exception</code></td>
+</tr>
+<tr>
+<td>address</td>
+<td>Bitcoin address of payout</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Three character currency code, either USD or BTC. Used with amount to calculate rate &amp; amount_btc</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Amount of payout to send in specified currency</td>
+</tr>
+<tr>
+<td>amount_btc</td>
+<td>Amount of payout to send in BTC, calculated from currency, amount, and rate</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>Rate used to convert amount in currency to amount_btc in BTC</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>Custom reference id associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>Custom customer id associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Custom description associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Datetime payout transaction was created</td>
+</tr>
+<tr>
+<td>completed_at</td>
+<td>Datetime payout transaction was completed</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td>Details of blockchain transaction of payout eg. &quot;transaction&quot;: {&quot;hash&quot;: &quot;f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f&quot;}</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-payout-details'>Get a Specific Payout Details</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/payouts/3658231a-cad1-47fb-b1bf-1b0fd5dh6dfd"</span> <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">readPayout</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3658231a-cad1-47fb-b1bf-1b0fd5dh6dfd"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d7428a6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5982544853"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:14:01.768Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:14:01.808Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific payout.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/payouts/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the payout to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='altcoin-invoices'>Altcoin Invoices</h1><h2 id='create-a-new-invoice-request-2'>Create a new invoice request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/invoice"</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"notification_url": "http://localhost/notification", "confirmation_url": "http://localhost/confirmation", "reference_id": "reference_id", "customer_id": "customer_id", "description": "description", "currency": "LTC"}'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">rcInvoice</span> <span class="o">=</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">createInvoice</span><span class="p">({});</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c5799624-1d9a-43d0-a27e-3aca5b568c44"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exception_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1521602040501"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiration_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1522206840501"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.019020"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170.437505"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate_usd"</span><span class="p">:</span><span class="s2">"0.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reference_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parent_invoice_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LUi6Z1pQHYfKxB1w3khsgqpVsUQ8BUa6S9"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"current_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T03:14:00.703Z"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Altcoin invoices have similar request parameters to existing invoices, and only modification to the currency parameter is required. To ensure backwards compatibility, the currency codes <code>USD</code> and <code>BTC</code> pass through the original code, which means that handling USD amounts for foreign currencies are not supported. Note that the exchange service may experience downtime for maintenance, and can be checked using the <code>/rates/:currency</code> route (as well as the exchange rate from currency &gt; <code>BTC</code>, and currency &gt; <code>USD</code>). In addition, the <code>confirmations_required</code> parameter is not used, and is set by the altcoin provider. The field is left there as legacy.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST https://www.rapidcoin.com/api/invoices</code></p>
+<h3 id='json-parameters-4'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reference_id</td>
+<td>string, optional</td>
+<td>Custom reference id associated with invoice</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>string, optional</td>
+<td>Custom customer id associated with invoice</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string, optional</td>
+<td>Custom description associated with invoice</td>
+</tr>
+<tr>
+<td>confirmations_required</td>
+<td>number, optional</td>
+<td>Number of blockchains required to complete invoice transaction &amp; trigger confirmation_url IPN</td>
+</tr>
+<tr>
+<td>notification_url</td>
+<td>string, optional</td>
+<td>Notification URL to POST when transaction is received on address</td>
+</tr>
+<tr>
+<td>confirmation_url</td>
+<td>string, optional</td>
+<td>Notification URL to POST when blockchain confirmations reaches confirmations_required</td>
+</tr>
+<tr>
+<td>redirect_url</td>
+<td>string, optional</td>
+<td>URL to redirect to after successful payment (web flow)</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>Three character currency code, list of supported currencies are available upon request</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>optional *</td>
+<td>Amount of invoice in specified currency</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+* amount</code> is optional, if they are not specified the invoice will be created an "open" invoice
+</aside>
+<h3 id='response-fields-3'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique Id of invoice</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Invoice status can either be <code>open</code>, <code>pending</code>, <code>confirming</code>, <code>complete</code>, <code>expired</code></td>
+</tr>
+<tr>
+<td>invoice_time</td>
+<td>UNIX timestamp when invoice was created</td>
+</tr>
+<tr>
+<td>expiration_time</td>
+<td>UNIX timestamp of when invoice address is expired of invoice</td>
+</tr>
+<tr>
+<td>exception_status</td>
+<td>Exception status of invoice</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Three character currency code</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>Rate used to convert amount in currency to amount_btc in BTC</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Amount of invoice in specified currency  (0 for open invoice)</td>
+</tr>
+<tr>
+<td>rate_btc</td>
+<td>Rate used to convert amount in currency to BTC</td>
+</tr>
+<tr>
+<td>rate_usd</td>
+<td>Rate used to convert amount in currency to USD</td>
+</tr>
+<tr>
+<td>paid_amount</td>
+<td>Amount paid out to customer in paid_currency</td>
+</tr>
+<tr>
+<td>paid_rate_btc</td>
+<td>Rate used to convert paid amount in currency to BTC</td>
+</tr>
+<tr>
+<td>paid_rate_usd</td>
+<td>Rate used to convert paid amount in currency to USD</td>
+</tr>
+<tr>
+<td>redirect_url</td>
+<td>URL to redirect to after successful payment</td>
+</tr>
+<tr>
+<td>notification_url</td>
+<td>Notification URL to POST when transaction is received on address</td>
+</tr>
+<tr>
+<td>confirmation_url</td>
+<td>Notification URL to POST when blockchain confirmations reaches required_confirmations</td>
+</tr>
+<tr>
+<td>confirmations_required</td>
+<td>Number of blockchain confirmations required to complete invoice and trigger POST to confirmation_notification_url</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>Custom reference id associated with invoice provided on creation</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>Custom customer id associated with invoice provided on creation</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Custom description associated with invoice provided on creation (if second deposit on address -description becomes SUB_INVOICE)</td>
+</tr>
+<tr>
+<td>parent_invoice_id</td>
+<td>Unique Id of parent invoice (if second deposit made on the same address - will reference the first invoice created. null if first invoice)</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Altcoin deposit address of invoice</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td>array of blockchain transactions of payments to invoice invoice eg. &quot;transactions&quot;: [ {&quot;hash&quot;:&quot;f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f&quot;, &quot;amount&quot;: 0, &quot;confirmations&quot; : 6, &quot;time&quot;: 0, &quot;received_time&quot;: 0}]</td>
+</tr>
+<tr>
+<td>current_time</td>
+<td>Current timestamp of request</td>
+</tr>
+</tbody></table>
+<h2 id='read-an-invoice-2'>Read an invoice</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/invoices/c5799624-1d9a-43d0-a27e-3aca5b568c44"</span> <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">readInvoice</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c5799624-1d9a-43d0-a27e-3aca5b568c44"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exception_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1521602040501"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiration_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1522206840501"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.019020"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170.437505"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paid_rate_usd"</span><span class="p">:</span><span class="s2">"0.000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reference_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parent_invoice_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LUi6Z1pQHYfKxB1w3khsgqpVsUQ8BUa6S9"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"current_time"</span><span class="p">:</span><span class="s2">"2018-03-21T03:14:00.703Z"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific invoice.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/invoices/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the invoice to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='altcoin-payouts'>Altcoin Payouts</h1><h2 id='create-a-new-payout-request-2'>Create a new payout request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/payouts"</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"currency": "LTC", "amount": "0.1", "address": "LS6JjYBzRxHtWtQtH7gN8yMHC9w7BMLWW3"}'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">createPayout</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ced6203-3271-4083-9ecf-b264f349756e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LS6JjYBzRxHtWtQtH7gN8yMHC9w7BMLWW3"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_subunit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.019151"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"173.990502"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T05:00:44.162Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transaction"</span><span class="p">:{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint create a new payout request.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST https://rapidcoin.com/api/payouts</code></p>
+<h3 id='json-parameters-5'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>Three character currency code, list of supported currencies are available upon request</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number, required</td>
+<td>Amount of payout to send in specified currency</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string, required</td>
+<td>BAltcoin address to send payout to</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>string, optional</td>
+<td>Custom reference id associated with payout</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>string, optional</td>
+<td>Custom customer id associated with payout</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string, optional</td>
+<td>Custom description associated with payout</td>
+</tr>
+</tbody></table>
+<h3 id='response-fields-4'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique Id of payout</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Payout status can either be <code>pending</code>, <code>complete</code>, <code>exception</code></td>
+</tr>
+<tr>
+<td>address</td>
+<td>Address of payout</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Three character currency code</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Amount of payout to send in specified currency</td>
+</tr>
+<tr>
+<td>amount_subunit</td>
+<td>Amount of payout to send in the lowest currency precision</td>
+</tr>
+<tr>
+<td>rate_btc</td>
+<td>Rate used to convert amount in currency to BTC</td>
+</tr>
+<tr>
+<td>rate_usd</td>
+<td>Rate used to convert amount in currency to USD</td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>Custom reference id associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>Custom customer id associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Custom description associated with payout provided on creation</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Datetime payout transaction was created</td>
+</tr>
+<tr>
+<td>completed_at</td>
+<td>Datetime payout transaction was completed</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td>Details of blockchain transaction of payout eg. &quot;transaction&quot;: {&quot;hash&quot;: &quot;f7b0989105b03d69e1ef913b3f7a12df3886d334d0d8706ff77ea78e6602493f&quot;}</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-payout-details-2'>Get a Specific Payout Details</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/payouts/9ced6203-3271-4083-9ecf-b264f349756e"</span> <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">readPayout</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ced6203-3271-4083-9ecf-b264f349756e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LS6JjYBzRxHtWtQtH7gN8yMHC9w7BMLWW3"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount_subunit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_btc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.019151"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"173.990502"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d7428a6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5982544853"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T05:00:44.162Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T05:06:11.021Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61623a041e05cad0da891c5d122b0722fefeac4c1d52fc667f484128fe9651e2"</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific payout.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/payouts/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the payout to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='rates'>Rates</h1><h2 id='get-exchange-rate'>Get Exchange Rate</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/rates/USD"</span> <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">getRate</span><span class="p">(</span><span class="nx">currency</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.013</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint returns the exchange rate of the specified currency.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/rates/&lt;currency&gt;</code></p>
+<h3 id='url-fields'>URL Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency</td>
+<td>currency to look up for the exchange rate (currently only BTC or USD)</td>
+</tr>
+</tbody></table>
+<h3 id='response-fields-5'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency</td>
+<td>the currency</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>currency exchange rate</td>
+</tr>
+</tbody></table>
+<h2 id='get-organization-balance'>Get Organization balance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://www.rapidcoin.com/api/organization/balance"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: my-api-key"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-version: 1.0"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">RapidCoinApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">rapidcoin-api</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://www.rapidcoin.com/api</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-api-key</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">apiVersion</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">rc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RapidCoinApi</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">rc</span><span class="p">.</span><span class="nx">getOrganizationBalance</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"btc"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.523</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint returns available balance in BTC.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET https://www.rapidcoin.com/api/organization/balance</code></p>
+<h3 id='response-fields-6'>Response Fields</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>btc</td>
+<td>available balance in BTC</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
